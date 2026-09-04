@@ -27,6 +27,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://embeds.beehiiv.com">
 <script src="assets/runtime.js"></script>
 
 </head>
@@ -1047,13 +1048,45 @@ a:hover{color:var(--color-accent-300)}
       <h2 style="font-size:clamp(30px,3.4vw,46px);line-height:1.08;letter-spacing:-0.025em;font-weight:500;margin:0 0 52px">Simple 4-Step Process</h2>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px">
-        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
-          <div style="padding-top:20px;border-top:1px solid color-mix(in srgb, var(--color-text) 14%, transparent)">
-            <span style="display:block;font-size:15px;letter-spacing:0.1em;color:var(--color-accent);margin-bottom:34px">{{ step.number }}</span>
-            <h3 style="font-size:20px;line-height:1.2;letter-spacing:-0.01em;font-weight:500;margin:0 0 10px">{{ step.title }}</h3>
-            <p style="margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 60%, transparent)">{{ step.description }}</p>
+        <div style="padding-top:20px;border-top:1px solid color-mix(in srgb, var(--color-text) 14%, transparent)">
+          <span style="display:block;font-size:15px;letter-spacing:0.1em;color:var(--color-accent);margin-bottom:34px">01</span>
+          <h3 style="font-size:20px;line-height:1.2;letter-spacing:-0.01em;font-weight:500;margin:0 0 10px">Audit + Revenue Leak Mapping</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 60%, transparent)">We identify exactly where your store is losing conversions and revenue.</p>
+        </div>
+        <div style="padding-top:20px;border-top:1px solid color-mix(in srgb, var(--color-text) 14%, transparent)">
+          <span style="display:block;font-size:15px;letter-spacing:0.1em;color:var(--color-accent);margin-bottom:34px">02</span>
+          <h3 style="font-size:20px;line-height:1.2;letter-spacing:-0.01em;font-weight:500;margin:0 0 10px">Custom Structure Rebuild</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Your site is restructured for maximum conversion from paid traffic.</p>
+        </div>
+        <div style="padding-top:20px;border-top:1px solid color-mix(in srgb, var(--color-text) 14%, transparent)">
+          <span style="display:block;font-size:15px;letter-spacing:0.1em;color:var(--color-accent);margin-bottom:34px">03</span>
+          <h3 style="font-size:20px;line-height:1.2;letter-spacing:-0.01em;font-weight:500;margin:0 0 10px">Offer & Bundle Optimization</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Strategic offer stacking and bundle logic to lift AOV.</p>
+        </div>
+        <div style="padding-top:20px;border-top:1px solid color-mix(in srgb, var(--color-text) 14%, transparent)">
+          <span style="display:block;font-size:15px;letter-spacing:0.1em;color:var(--color-accent);margin-bottom:34px">04</span>
+          <h3 style="font-size:20px;line-height:1.2;letter-spacing:-0.01em;font-weight:500;margin:0 0 10px">30-Day Performance Check</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 60%, transparent)">We review the data, optimize further, and lock in your results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" style="padding:110px 0 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px">
+      <div style="border-radius:16px;padding:clamp(32px,5vw,56px);background:color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
+          <div>
+            <p style="margin:0 0 14px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent)">Free Audit Prompts</p>
+            <h2 style="font-size:clamp(26px,3vw,38px);line-height:1.1;letter-spacing:-0.02em;font-weight:500;margin:0 0 14px;text-wrap:balance">Find your store&rsquo;s leaks in 20 minutes</h2>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 62%, transparent)">Get the 7-prompt AI CRO audit we run on real CPG stores, free. Plus one store teardown a week. No spam, unsubscribe anytime.</p>
           </div>
-        </sc-for>
+          <div style="min-height:120px">
+            <!-- ATLAS: replace REPLACE_WITH_YOUR_FORM_ID with the beehiiv embed form id (beehiiv: Grow -> Subscribe Forms -> create -> copy the embeds.beehiiv.com URL) -->
+            <iframe src="https://embeds.beehiiv.com/REPLACE_WITH_YOUR_FORM_ID?slim=true" title="Subscribe to the ConvertCPG newsletter" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="width:100%;border-radius:8px;margin:0;background-color:transparent"></iframe>
+            <p style="margin:12px 0 0;font-size:12.5px;color:color-mix(in srgb, var(--color-text) 45%, transparent)">Delivered instantly. Reply with your store URL and we might tear it down on the channel.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1089,7 +1122,7 @@ a:hover{color:var(--color-accent-300)}
     <div style="height:1px;background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent)"></div>
     <div style="max-width:1180px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
       <img src="assets/convert-cpg.png" alt="Convert CPG" style="height:26px;width:auto;opacity:0.8">
-      <p style="margin:0;font-size:12px;color:color-mix(in srgb, var(--color-text) 42%, transparent)">© {{ year }} The Mendolia Group Corp - All Rights Reserved.</p>
+      <p style="margin:0;font-size:12px;color:color-mix(in srgb, var(--color-text) 42%, transparent)">© 2026 The Mendolia Group Corp - All Rights Reserved.</p>
     </div>
   </footer>
 
