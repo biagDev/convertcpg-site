@@ -27,7 +27,6 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://subscribe-forms.beehiiv.com">
 <script src="assets/runtime.js"></script>
 
 </head>
@@ -1081,9 +1080,13 @@ a:hover{color:var(--color-accent-300)}
             <h2 style="font-size:clamp(26px,3vw,38px);line-height:1.1;letter-spacing:-0.02em;font-weight:500;margin:0 0 14px;text-wrap:balance">Find your store&rsquo;s leaks in 20 minutes</h2>
             <p style="margin:0;font-size:16px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 62%, transparent)">Get the 7-prompt AI CRO audit we run on real CPG stores, free. Plus one store teardown a week. No spam, unsubscribe anytime.</p>
           </div>
-          <div style="min-height:350px">
-            <iframe id="ccpg-subscribe" src="https://subscribe-forms.beehiiv.com/v3/forms/7895a92f-2ab0-4afe-a972-ff71b77d9569?referrer=https%3A%2F%2Fconvertcpg.com%2F" title="Get the free 20-minute AI CRO audit" loading="lazy" frameborder="0" scrolling="no" style="width:100%;height:350px;border:0;display:block"></iframe>
-            <style>@media (max-width:640px){ #ccpg-subscribe{height:440px} }</style>
+          <div>
+            <form id="ccpg-form" action="https://convertcpg-subscribe.convertcpg.workers.dev" method="POST" style="display:flex;gap:10px;flex-wrap:wrap">
+              <label for="ccpg-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label>
+              <input id="ccpg-email" type="email" name="email" required placeholder="you@yourbrand.com" autocomplete="email" style="flex:1;min-width:210px;padding:13px 16px;border-radius:8px;border:1px solid color-mix(in srgb, var(--color-text) 22%, transparent);background:var(--color-bg);color:var(--color-text);font:inherit;font-size:15px">
+              <button type="submit" class="btn btn-primary" style="font-size:15px;padding:13px 22px;border-radius:8px">Get the audit</button>
+            </form>
+            <p id="ccpg-form-status" hidden style="margin:14px 0 0;font-size:15px;font-weight:600"></p>
             <p style="margin:12px 0 0;font-size:12.5px;color:color-mix(in srgb, var(--color-text) 45%, transparent)">Delivered instantly. Reply with your store URL and we might tear it down on the channel.</p>
           </div>
         </div>
@@ -1239,5 +1242,32 @@ class Component extends DCLogic {
 </script>
 
 
-<script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+<script>
+(function(){
+  var f=document.getElementById('ccpg-form'); if(!f) return;
+  var btn=f.querySelector('button'), st=document.getElementById('ccpg-form-status');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email=f.email.value.trim(); if(!email) return;
+    var q=new URLSearchParams(location.search);
+    btn.disabled=true; var old=btn.textContent; btn.textContent='Sending\u2026';
+    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      email:email,
+      utm_source:q.get('utm_source')||'website',
+      utm_medium:q.get('utm_medium')||'organic',
+      utm_campaign:q.get('utm_campaign')||''
+    })})
+    .then(function(r){return r.json()})
+    .then(function(d){
+      if(d.ok){ f.hidden=true; st.textContent='Done! The 7 prompts are on their way to your inbox.'; st.style.color='#7fc99a'; st.hidden=false; }
+      else { throw new Error(d.error||'') }
+    })
+    .catch(function(err){
+      st.textContent=(err&&err.message)||'Something went wrong, try again.';
+      st.style.color='#e08585'; st.hidden=false;
+      btn.disabled=false; btn.textContent=old;
+    });
+  });
+})();
+</script>
 </body></html>
