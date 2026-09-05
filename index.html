@@ -1243,31 +1243,32 @@ class Component extends DCLogic {
 
 
 <script>
-(function(){
-  var f=document.getElementById('ccpg-form'); if(!f) return;
-  var btn=f.querySelector('button'), st=document.getElementById('ccpg-form-status');
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    var email=f.email.value.trim(); if(!email) return;
-    var q=new URLSearchParams(location.search);
-    btn.disabled=true; var old=btn.textContent; btn.textContent='Sending\u2026';
-    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-      email:email,
-      utm_source:q.get('utm_source')||'website',
-      utm_medium:q.get('utm_medium')||'organic',
-      utm_campaign:q.get('utm_campaign')||''
-    })})
-    .then(function(r){return r.json()})
-    .then(function(d){
-      if(d.ok){ f.hidden=true; st.textContent='Done! The 7 prompts are on their way to your inbox.'; st.style.color='#7fc99a'; st.hidden=false; }
-      else { throw new Error(d.error||'') }
-    })
-    .catch(function(err){
-      st.textContent=(err&&err.message)||'Something went wrong, try again.';
-      st.style.color='#e08585'; st.hidden=false;
-      btn.disabled=false; btn.textContent=old;
-    });
+document.addEventListener('submit', function(e){
+  var f = e.target;
+  if (!f || f.id !== 'ccpg-form') return;
+  e.preventDefault();
+  var btn = f.querySelector('button');
+  var st = document.getElementById('ccpg-form-status');
+  var email = f.email.value.trim();
+  if (!email) return;
+  var q = new URLSearchParams(location.search);
+  btn.disabled = true; var old = btn.textContent; btn.textContent = 'Sending\u2026';
+  fetch(f.action, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
+    email: email,
+    utm_source: q.get('utm_source') || 'website',
+    utm_medium: q.get('utm_medium') || 'organic',
+    utm_campaign: q.get('utm_campaign') || ''
+  })})
+  .then(function(r){ return r.json() })
+  .then(function(d){
+    if (d.ok) { f.hidden = true; st.textContent = 'Done! The 7 prompts are on their way to your inbox.'; st.style.color = '#7fc99a'; st.hidden = false; }
+    else { throw new Error(d.error || '') }
+  })
+  .catch(function(err){
+    st.textContent = (err && err.message) || 'Something went wrong, try again.';
+    st.style.color = '#e08585'; st.hidden = false;
+    btn.disabled = false; btn.textContent = old;
   });
-})();
+});
 </script>
 </body></html>
