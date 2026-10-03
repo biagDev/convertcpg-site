@@ -281,7 +281,12 @@ def main():
         sys.exit("Usage: python3 tools/build-docs.py /path/to/conviction-theme-docs.md")
     title, intro, toc, body = convert(src.read_text())
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(page(title, intro, toc, body))
+    out = page(title, intro, toc, body)
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from site_layout import header, FOOTER
+    out = re.sub(r'<header class="site-header">.*?</header>\n', lambda m: header("docs"), out, count=1, flags=re.S)
+    out = re.sub(r'<footer class="site-footer">.*?</footer>\n', lambda m: FOOTER, out, count=1, flags=re.S)
+    OUT.write_text(out)
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(toc)} sections)")
 
 
