@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from site_layout import head, header, tail, FOOTER  # noqa: E402
+from site_layout import head, header, tail, FOOTER, add_clarity  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 IMG = "/assets/conviction/img/"
@@ -492,7 +492,7 @@ def support():
     s = re.sub(r'<header class="site-header">.*?</header>\n', lambda m: header("support"), s, count=1, flags=re.S)
     s = re.sub(r'<footer class="site-footer">.*?</footer>\n(<script src="/assets/conviction.js" defer></script>\n)?', lambda m: FOOTER, s, count=1, flags=re.S)
     s = s.replace('<a href="/">See ConvertCPG services →</a>', '<a href="/services/">See setup and CRO services →</a>')
-    p.write_text(s)
+    p.write_text(add_clarity(s))
     print("Refreshed conviction/support/index.html")
 
 

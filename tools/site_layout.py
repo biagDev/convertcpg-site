@@ -5,6 +5,23 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">')
 
+CLARITY = """<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yrv56geech");
+</script>
+"""
+
+
+def add_clarity(page):
+    """Put the Microsoft Clarity tag right before </head>, once."""
+    if "clarity.ms/tag" in page:
+        return page
+    return page.replace("</head>", CLARITY + "</head>", 1)
+
+
 NAV = [
     ("The Rail", "/#rail", "home"),
     ("Demos", "/#demos", "home"),
@@ -38,7 +55,7 @@ def head(title, description, path, og_image="/assets/conviction/img/sowfield-her
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {FONTS}
 <link rel="stylesheet" href="/assets/conviction.css">
-{extra}</head>
+{extra}{CLARITY}</head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 """

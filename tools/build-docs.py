@@ -283,10 +283,10 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     out = page(title, intro, toc, body)
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from site_layout import header, FOOTER
+    from site_layout import header, FOOTER, add_clarity
     out = re.sub(r'<header class="site-header">.*?</header>\n', lambda m: header("docs"), out, count=1, flags=re.S)
     out = re.sub(r'<footer class="site-footer">.*?</footer>\n', lambda m: FOOTER, out, count=1, flags=re.S)
-    OUT.write_text(out)
+    OUT.write_text(add_clarity(out))
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(toc)} sections)")
 
 
