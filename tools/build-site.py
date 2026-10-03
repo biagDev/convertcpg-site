@@ -215,7 +215,7 @@ def home():
 
 <section class="section" data-rail="Support comes from the person who built it." data-rail-sub="A note from the founder">
 <div class="founder">
-<img src="{IMG}biagio.jpg" alt="Biagio Mendolia, founder of ConvertCPG" width="960" height="1200" loading="lazy">
+<img src="{IMG}biagio-portrait.jpg" alt="Biagio Mendolia, founder of ConvertCPG" width="960" height="1200" loading="lazy">
 <div class="founder__copy">
 <div class="kicker">A note from the founder</div>
 <blockquote>“I spent ten years rebuilding product pages by hand for Shopify brands. Conviction is that page, built into a theme.”</blockquote>
@@ -278,7 +278,7 @@ def about():
 <p class="lead">Ten years of building, fixing and rebuilding Shopify stores. Conviction is what I kept building by hand, finally made into a theme.</p>
 </div>
 <figure class="portrait" style="margin:0">
-<img src="{IMG}biagio.jpg" alt="Biagio Mendolia" width="960" height="1200">
+<img src="{IMG}biagio-portrait.jpg" alt="Biagio Mendolia" width="960" height="1200">
 <figcaption><strong>Biagio Mendolia</strong><br><span>Founder, ConvertCPG. Builder of Conviction.</span></figcaption>
 </figure>
 </section>
@@ -329,7 +329,7 @@ def about():
 """
     write("about/index.html", head("About · ConvertCPG",
                                    "ConvertCPG is Biagio Mendolia: ten years building and rebuilding Shopify stores, now the maker of the Conviction theme.",
-                                   "/about/", og_image=IMG + "biagio.jpg") + body + tail())
+                                   "/about/", og_image=IMG + "biagio-portrait.jpg") + body + tail())
 
 
 # ---------------------------------------------------------------- FAQ
