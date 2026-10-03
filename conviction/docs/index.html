@@ -108,7 +108,7 @@
 <h3 id="layout">Layout<a class="anchor" href="#layout" aria-label="Link to Layout">#</a></h3>
 <ul><li><strong>Page width</strong> sets the maximum content width.</li><li><strong>Section spacing</strong> sets the default space between sections.</li></ul>
 <h3 id="cart">Cart<a class="anchor" href="#cart" aria-label="Link to Cart">#</a></h3>
-<ul><li><strong>Cart type:</strong> a drawer that slides in, or the cart page.</li><li><strong>Enable cart note:</strong> lets customers leave a note.</li><li><strong>Free shipping threshold:</strong> shows a progress bar in the cart drawer. Set it to 0 to hide the bar. Make sure it matches your real shipping rates.</li></ul>
+<ul><li><strong>Cart type:</strong> a drawer that slides in, or the cart page.</li><li><strong>Enable cart note:</strong> lets customers leave a note.</li><li><strong>Free shipping threshold:</strong> shows a progress bar in the cart drawer. It is in your store currency, and the bar hides for shoppers paying in another currency. Set it to 0 to hide the bar. Make sure it matches your real shipping rates.</li></ul>
 <h3 id="search">Search<a class="anchor" href="#search" aria-label="Link to Search">#</a></h3>
 <p>Predictive search shows products, articles and pages as customers type. You can show or hide vendor and price in the suggestions.</p>
 <h3 id="social-media">Social media<a class="anchor" href="#social-media" aria-label="Link to Social media">#</a></h3>
@@ -120,7 +120,7 @@
 <ol><li><strong>Product hero:</strong> the gallery and the buy box.</li><li><strong>Product story:</strong> a run of story sections below the hero.</li></ol>
 <h3 id="product-hero-blocks">Product hero blocks<a class="anchor" href="#product-hero-blocks" aria-label="Link to Product hero blocks">#</a></h3>
 <p>The info column is made of blocks you can reorder, hide or remove:</p>
-<ul><li><strong>Eyebrow:</strong> a small line above the title. Shows the vendor or your own text.</li><li><strong>Title:</strong> the product title, in display or standard style.</li><li><strong>Price:</strong> updates with the selected variant, including sale and unit prices.</li><li><strong>Short text:</strong> a one-line benefit. Connect it to a product metafield to show different text per product (see section 5).</li><li><strong>Buy buttons:</strong> variant picker, quantity, Add to cart, Shop Pay Installments, accelerated checkout, pickup availability and gift card fields.</li><li><strong>Trust strip:</strong> icon and text items, such as "Free shipping" or "60-day guarantee".</li><li><strong>Description:</strong> the full product description.</li></ul>
+<ul><li><strong>Eyebrow:</strong> a small line above the title. Shows the vendor or your own text.</li><li><strong>Title:</strong> the product title, in display or standard style.</li><li><strong>Price:</strong> updates with the selected variant, including sale and unit prices. Under it, a note says whether tax is included (from your Shopify tax settings) and links your shipping policy if you have written one.</li><li><strong>Short text:</strong> a one-line benefit. Connect it to a product metafield to show different text per product (see section 5).</li><li><strong>Buy buttons:</strong> variant picker, quantity, Add to cart, Shop Pay Installments, accelerated checkout, pickup availability and gift card fields.</li><li><strong>Trust strip:</strong> icon and text items, such as "Free shipping" or "60-day guarantee".</li><li><strong>Description:</strong> the full product description.</li></ul>
 <p>You can also add <strong>Text</strong>, <strong>Group</strong>, <strong>Custom Liquid</strong> and <strong>app blocks</strong> here.</p>
 <h3 id="buy-buttons-settings">Buy buttons settings<a class="anchor" href="#buy-buttons-settings" aria-label="Link to Buy buttons settings">#</a></h3>
 <p><strong>Variant picker style:</strong></p>
@@ -141,6 +141,7 @@
 <h3 id="pickup-availability">Pickup availability<a class="anchor" href="#pickup-availability" aria-label="Link to Pickup availability">#</a></h3>
 <p>Turn on local pickup for a location in <strong>Settings &gt; Shipping and delivery &gt; Local pickup</strong>. The buy box then shows pickup status for the selected variant, with a list of pickup locations.</p>
 <h3 id="gift-cards">Gift cards<a class="anchor" href="#gift-cards" aria-label="Link to Gift cards">#</a></h3>
+<p>The gift card page a customer receives shows your logo, the balance, the code, a QR code for in-store redemption, Add to Apple Wallet and a print button.</p>
 <p>On gift card products, the buy box shows a "send as a gift" option with the recipient's email, name, a message and a send date. Accelerated checkout buttons are hidden on gift cards, because Shopify doesn't support recipient details there.</p>
 <h3 id="standard-product-template">Standard product template<a class="anchor" href="#standard-product-template" aria-label="Link to Standard product template">#</a></h3>
 <p>Prefer a simpler product page? Assign the <strong>standard</strong> product template to a product (in the product's <strong>Theme template</strong> setting). It uses a classic layout without the product story or the rail.</p>
@@ -195,7 +196,8 @@
 <details><summary>Can I use my own fonts?</summary><p>Conviction uses Shopify's font library, which works on every device and loads fast. Choose any font there in Theme settings &gt; Typography.</p></details>
 <details><summary>How do I show a different story on each product?</summary><p>Connect story text and images to product metafields with the dynamic source icon. See section 5.</p></details>
 <details><summary>Can I add apps like reviews?</summary><p>Yes. Add their app block to the Product hero or Product story, or use a Custom Liquid block.</p></details>
-<details><summary>The free shipping bar shows the wrong amount.</summary><p>Set <strong>Free shipping threshold</strong> in Theme settings &gt; Cart to match your shipping rates, or set it to 0 to hide the bar.</p></details>
+<details><summary>The free shipping bar shows the wrong amount.</summary><p>Set <strong>Free shipping threshold</strong> in Theme settings &gt; Cart to match your shipping rates, or set it to 0 to hide the bar. The threshold is in your store currency, so the bar stays hidden for shoppers paying in another currency.</p></details>
+<details><summary>Discounts in the cart.</summary><p>Discount codes and automatic discounts show on the line they apply to, and order-level discounts show between the subtotal and the total. Nothing to set up.</p></details>
 <details><summary>How do I get help?</summary><p><a href="https://convertcpg.com/conviction/support/">Contact support</a>. Include your store URL and screenshots. We reply within 2 business days.</p></details>
 </div>
 <h2 id="version-history">Version history<a class="anchor" href="#version-history" aria-label="Link to Version history">#</a></h2>
