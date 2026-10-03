@@ -3,8 +3,8 @@
   "short_name": "ConvertCPG",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#161826",
-  "theme_color": "#161826",
+  "background_color": "#FAFAF7",
+  "theme_color": "#FAFAF7",
   "icons": [
     {
       "src": "/apple-touch-icon.png",
