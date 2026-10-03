@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conviction theme documentation · ConvertCPG</title>
+<meta name="description" content="Documentation for Conviction, the Shopify theme by ConvertCPG: setup, theme settings, the product page, the Adaptive Conviction Rail, story sections and FAQ.">
+<link rel="canonical" href="https://convertcpg.com/conviction/docs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ConvertCPG">
+<meta property="og:title" content="Conviction theme documentation">
+<meta property="og:description" content="Everything the Conviction Shopify theme can do, and how to set it up.">
+<meta property="og:url" content="https://convertcpg.com/conviction/docs/">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/conviction.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+<div class="site-header__inner">
+<a class="logo" href="/"><span class="logo__mark" aria-hidden="true"></span>ConvertCPG</a>
+<nav class="site-nav" aria-label="Main">
+<a href="/conviction/docs/" aria-current="page">Docs</a>
+<a href="/conviction/support/">Support</a>
+<a class="pill" href="/conviction/support/">Contact support</a>
+</nav>
+</div>
+</header>
+
+<main id="content">
+<section class="docs-hero">
+<div class="eyebrow">Conviction documentation · v1.0.0</div>
+<h1 class="display">Everything the theme can do,<br>and how to set it up.</h1>
+<p class="lead">Conviction is a Shopify theme for brands that teach and sell on the same page. Its product page tells a story section by section, and the Adaptive Conviction Rail keeps an Add to cart button on screen with a message that changes as shoppers read. This guide covers setup, every section, and the questions merchants ask most. Need help? <a href="/conviction/support/">Contact support</a>. We reply within 2 business days.</p>
+<div class="docs-search" role="search">
+<label class="docs-search__box"><span class="visually-hidden">Search the docs</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B68" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input type="search" id="docs-q" placeholder="Search: rail, swatches, bundles, subscriptions" autocomplete="off" aria-controls="docs-results" aria-expanded="false">
+</label>
+<div class="docs-search__results" id="docs-results" hidden></div>
+</div>
+<div class="popular">Popular:
+<a href="#setting-the-messages">Rail messages</a>
+<a href="#bundle-tiers-multipacks">Bundle tiers</a>
+<a href="#color-swatches">Color swatches</a>
+<a href="#subscriptions-and-purchase-options">Subscriptions</a>
+</div>
+</section>
+
+<section class="guides" aria-labelledby="guides-title">
+<h2 id="guides-title">Guides</h2>
+<div class="guides__grid">
+<a class="guide guide--dark" href="#getting-started"><span class="guide__n">01 · Start here</span><span class="guide__t">Getting started</span><span class="guide__d">Install, pick the Conviction or Alloy preset, and the five first steps.</span></a>
+<a class="guide" href="#theme-settings"><span class="guide__n">02</span><span class="guide__t">Theme settings</span><span class="guide__d">Colors, typography, layout, cart, search, social links and rail defaults.</span></a>
+<a class="guide" href="#the-product-page"><span class="guide__n">03</span><span class="guide__t">The product page</span><span class="guide__d">Hero blocks, variant styles, swatches, bundle tiers, subscriptions, pickup, gift cards.</span></a>
+<a class="guide guide--sand" href="#the-adaptive-conviction-rail"><span class="guide__n">04 · Signature feature</span><span class="guide__t">The Adaptive Conviction Rail</span><span class="guide__d">How it behaves, default and per-section messages, button labels, colors.</span></a>
+<a class="guide" href="#story-sections"><span class="guide__n">05</span><span class="guide__t">Story sections</span><span class="guide__d">15 modules, section buttons, starter stories, a different story per product.</span></a>
+<a class="guide" href="#other-sections"><span class="guide__n">06</span><span class="guide__t">Other sections</span><span class="guide__d">Heroes, editorial, commerce, content and utility sections.</span></a>
+<a class="guide" href="#collections-search-and-filters"><span class="guide__n">07</span><span class="guide__t">Collections, search and filters</span><span class="guide__d">Filters, the phone filter panel and complementary products.</span></a>
+<a class="guide" href="#apps"><span class="guide__n">08</span><span class="guide__t">Apps</span><span class="guide__d">App blocks, Custom Liquid and Follow on Shop.</span></a>
+<a class="guide" href="#languages"><span class="guide__n">09</span><span class="guide__t">Languages</span><span class="guide__d">Translate theme text with Edit translations or Translate &amp; Adapt.</span></a>
+<a class="guide" href="#faq"><span class="guide__n">10</span><span class="guide__t">FAQ</span><span class="guide__d">Answers to the questions merchants ask most.</span></a>
+</div>
+</section>
+
+<div class="docs-layout">
+<nav class="toc" aria-label="On this page">
+<div class="toc__title">On this page</div>
+<ol><li><a href="#getting-started">1. Getting started</a></li><li><a href="#theme-settings">2. Theme settings</a></li><li><a href="#the-product-page">3. The product page</a></li><li><a href="#the-adaptive-conviction-rail">4. The Adaptive Conviction Rail</a></li><li><a href="#story-sections">5. Story sections</a></li><li><a href="#other-sections">6. Other sections</a></li><li><a href="#collections-search-and-filters">7. Collections, search and filters</a></li><li><a href="#apps">8. Apps</a></li><li><a href="#languages">9. Languages</a></li><li><a href="#faq">10. FAQ</a></li></ol>
+<div class="toc__help">Stuck? <a href="/conviction/support/">Contact support</a>. Include your store URL and a screenshot. We reply within 2 business days.</div>
+</nav>
+<article class="prose" id="docs">
+<h2 id="getting-started">1. Getting started<a class="anchor" href="#getting-started" aria-label="Link to 1. Getting started">#</a></h2>
+<h3 id="install-and-choose-a-preset">Install and choose a preset<a class="anchor" href="#install-and-choose-a-preset" aria-label="Link to Install and choose a preset">#</a></h3>
+<p>Conviction comes with two presets. Each one sets the colors, fonts, home page and product page layout to match its demo store.</p>
+<ul><li><strong>Conviction.</strong> Warm sand tones, editorial serif headings. Built for supplements, wellness and ingredient-led products.</li><li><strong>Alloy.</strong> Cool neutrals, clean sans-serif headings. Built for devices and technical products.</li></ul>
+<p>Pick the one closest to your brand. You can change any color, font or section afterwards.</p>
+<h3 id="where-things-live">Where things live<a class="anchor" href="#where-things-live" aria-label="Link to Where things live">#</a></h3>
+<ul><li><strong>Theme settings</strong> (the gear icon in the theme editor): logo, colors, fonts, layout, cart, search, social links and the rail defaults.</li><li><strong>Sections and blocks</strong> (the left sidebar): everything on each page. Click a section to edit it, drag to reorder, or use the eye icon to hide it.</li><li><strong>Templates</strong> (the page selector at the top of the editor): Home page, Products, Collections and so on.</li></ul>
+<h3 id="first-steps-checklist">First steps checklist<a class="anchor" href="#first-steps-checklist" aria-label="Link to First steps checklist">#</a></h3>
+<ol><li>Upload your logo in <strong>Theme settings &gt; Logo</strong>.</li><li>Set your colors and fonts (see section 2).</li><li>Set the rail's default message in <strong>Theme settings &gt; Conviction Rail</strong>.</li><li>Open a product in the editor and fill in the product story (see sections 3 to 5).</li><li>Set up your menus in <strong>Online Store &gt; Navigation</strong>.</li></ol>
+<h2 id="theme-settings">2. Theme settings<a class="anchor" href="#theme-settings" aria-label="Link to 2. Theme settings">#</a></h2>
+<h3 id="colors">Colors<a class="anchor" href="#colors" aria-label="Link to Colors">#</a></h3>
+<p>Every background color has a matching text color, so text stays readable.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table"><table><thead><tr><th>Setting</th><th>Used for</th><th>Paired text color</th></tr></thead><tbody><tr><td>Background</td><td>Page background</td><td>Text</td></tr><tr><td>Borders and tints</td><td>Dividers, cards, tinted sections</td><td>Text</td></tr><tr><td>Buttons and rail background</td><td>Primary buttons, the rail, the cart badge</td><td>Buttons and rail text</td></tr><tr><td>Secondary text</td><td>Captions, labels, small print</td><td>Shown on Background</td></tr><tr><td>Accent</td><td>Decorative details, such as the accent divider</td><td>Decorative only</td></tr></tbody></table></div>
+<p><strong>Buttons and rail text</strong> can stay empty. Conviction then picks Text or Background automatically, whichever reads better on your button color.</p>
+<p>Tip: keep strong contrast between Text and Background. Low contrast makes the store harder to read for many shoppers.</p>
+<h3 id="typography">Typography<a class="anchor" href="#typography" aria-label="Link to Typography">#</a></h3>
+<ul><li><strong>Heading</strong> and <strong>Body</strong> use Shopify's font library. The style you pick (for example Light or Semibold) sets the weight.</li><li><strong>Type scale</strong> makes all headings tighter or more generous.</li></ul>
+<h3 id="layout">Layout<a class="anchor" href="#layout" aria-label="Link to Layout">#</a></h3>
+<ul><li><strong>Page width</strong> sets the maximum content width.</li><li><strong>Section spacing</strong> sets the default space between sections.</li></ul>
+<h3 id="cart">Cart<a class="anchor" href="#cart" aria-label="Link to Cart">#</a></h3>
+<ul><li><strong>Cart type:</strong> a drawer that slides in, or the cart page.</li><li><strong>Enable cart note:</strong> lets customers leave a note.</li><li><strong>Free shipping threshold:</strong> shows a progress bar in the cart drawer. Set it to 0 to hide the bar. Make sure it matches your real shipping rates.</li></ul>
+<h3 id="search">Search<a class="anchor" href="#search" aria-label="Link to Search">#</a></h3>
+<p>Predictive search shows products, articles and pages as customers type. You can show or hide vendor and price in the suggestions.</p>
+<h3 id="social-media">Social media<a class="anchor" href="#social-media" aria-label="Link to Social media">#</a></h3>
+<p>Add your profile links. They appear in the footer.</p>
+<h3 id="conviction-rail">Conviction Rail<a class="anchor" href="#conviction-rail" aria-label="Link to Conviction Rail">#</a></h3>
+<p>What the rail shows when no story section has its own message. Leave the headline empty to show the product's name. See section 4.</p>
+<h2 id="the-product-page">3. The product page<a class="anchor" href="#the-product-page" aria-label="Link to 3. The product page">#</a></h2>
+<p>The default product template is built from two parts:</p>
+<ol><li><strong>Product hero:</strong> the gallery and the buy box.</li><li><strong>Product story:</strong> a run of story sections below the hero.</li></ol>
+<h3 id="product-hero-blocks">Product hero blocks<a class="anchor" href="#product-hero-blocks" aria-label="Link to Product hero blocks">#</a></h3>
+<p>The info column is made of blocks you can reorder, hide or remove:</p>
+<ul><li><strong>Eyebrow:</strong> a small line above the title. Shows the vendor or your own text.</li><li><strong>Title:</strong> the product title, in display or standard style.</li><li><strong>Price:</strong> updates with the selected variant, including sale and unit prices.</li><li><strong>Short text:</strong> a one-line benefit. Connect it to a product metafield to show different text per product (see section 5).</li><li><strong>Buy buttons:</strong> variant picker, quantity, Add to cart, Shop Pay Installments, accelerated checkout, pickup availability and gift card fields.</li><li><strong>Trust strip:</strong> icon and text items, such as "Free shipping" or "60-day guarantee".</li><li><strong>Description:</strong> the full product description.</li></ul>
+<p>You can also add <strong>Text</strong>, <strong>Group</strong>, <strong>Custom Liquid</strong> and <strong>app blocks</strong> here.</p>
+<h3 id="buy-buttons-settings">Buy buttons settings<a class="anchor" href="#buy-buttons-settings" aria-label="Link to Buy buttons settings">#</a></h3>
+<p><strong>Variant picker style:</strong></p>
+<ul><li><strong>Dropdown:</strong> one dropdown per option.</li><li><strong>Buttons:</strong> one button per value.</li><li><strong>Swatches:</strong> color or image circles for options that have swatch data. Other options show as buttons.</li><li><strong>Bundle tiers:</strong> cards for pack sizes. See "Bundle tiers" below.</li></ul>
+<p>Other settings: <strong>Show quantity selector</strong>, <strong>Show accelerated checkout buttons</strong> (on by default) and <strong>Show pickup availability</strong>.</p>
+<h3 id="color-swatches">Color swatches<a class="anchor" href="#color-swatches" aria-label="Link to Color swatches">#</a></h3>
+<p>Swatches come from Shopify's product category metafields.</p>
+<ol><li>Open the product in <strong>Products</strong> and set its <strong>Category</strong> (for example Apparel &amp; Accessories &gt; Clothing &gt; Clothing Tops &gt; Shirts). Save.</li><li>In <strong>Variants</strong>, add or edit the Color option and connect it to the <strong>Color</strong> category metafield.</li><li>Choose your colors. Each one already has a swatch color. You can edit colors or add an image in <strong>Content &gt; Metaobjects</strong>.</li><li>Set <strong>Variant picker style</strong> to <strong>Swatches</strong>. Options without a color show as buttons, so Swatches is safe on every product.</li></ol>
+<p><strong>Swatches not showing?</strong> Open each color under <strong>Content &gt; Metaobjects</strong>, make a small edit (for example retype the last character of its color) and save. Shopify sometimes only publishes a swatch to your store after the color is saved.</p>
+<p><strong>Wrong colors in the collection filter?</strong> The filter groups colors by each entry's <strong>Base color</strong>. Check that every color has the right base color, and only one.</p>
+<h3 id="bundle-tiers-multipacks">Bundle tiers (multipacks)<a class="anchor" href="#bundle-tiers-multipacks" aria-label="Link to Bundle tiers (multipacks)">#</a></h3>
+<p>Show pack sizes as cards with the price, savings and per-unit price.</p>
+<ol><li>Give the product an option such as <strong>Pack</strong> with values like 1, 3 and 6.</li><li>Set each variant's price.</li><li>To show a saving, set each variant's <strong>compare-at price</strong> (for example the price of 3 single units). Conviction shows "Save $X" only when the compare-at price is higher, so the page always matches what the cart charges.</li><li>Optional: set a <strong>unit price</strong> on each variant to show the price per item.</li><li>In <strong>Buy buttons</strong>, choose <strong>Bundle tiers</strong>. Enter the option name in <strong>Option shown as tiers</strong> (default "Pack"). Use <strong>Highlight tier</strong> and <strong>Highlight label</strong> to mark one card, for example "Most popular".</li></ol>
+<p>For mix-and-match bundles, use a bundles app and add its app block to the product page.</p>
+<h3 id="subscriptions-and-purchase-options">Subscriptions and purchase options<a class="anchor" href="#subscriptions-and-purchase-options" aria-label="Link to Subscriptions and purchase options">#</a></h3>
+<p>Conviction supports any app that uses Shopify selling plans, including Shopify Subscriptions, Recharge, Skio and Smartrr. Pre-order and try-before-you-buy apps that use selling plans work too.</p>
+<ul><li>Once the app is set up on a product, <strong>Purchase options</strong> appear in the buy box automatically.</li><li><strong>One-time purchase</strong> is selected by default.</li><li>Each plan shows its real price and saving, taken from your app's settings.</li></ul>
+<h3 id="pickup-availability">Pickup availability<a class="anchor" href="#pickup-availability" aria-label="Link to Pickup availability">#</a></h3>
+<p>Turn on local pickup for a location in <strong>Settings &gt; Shipping and delivery &gt; Local pickup</strong>. The buy box then shows pickup status for the selected variant, with a list of pickup locations.</p>
+<h3 id="gift-cards">Gift cards<a class="anchor" href="#gift-cards" aria-label="Link to Gift cards">#</a></h3>
+<p>On gift card products, the buy box shows a "send as a gift" option with the recipient's email, name, a message and a send date. Accelerated checkout buttons are hidden on gift cards, because Shopify doesn't support recipient details there.</p>
+<h3 id="standard-product-template">Standard product template<a class="anchor" href="#standard-product-template" aria-label="Link to Standard product template">#</a></h3>
+<p>Prefer a simpler product page? Assign the <strong>standard</strong> product template to a product (in the product's <strong>Theme template</strong> setting). It uses a classic layout without the product story or the rail.</p>
+<h2 id="the-adaptive-conviction-rail">4. The Adaptive Conviction Rail<a class="anchor" href="#the-adaptive-conviction-rail" aria-label="Link to 4. The Adaptive Conviction Rail">#</a></h2>
+<p>The rail is a slim bar at the bottom of the product page with a message and an Add to cart button.</p>
+<h3 id="how-it-behaves">How it behaves<a class="anchor" href="#how-it-behaves" aria-label="Link to How it behaves">#</a></h3>
+<ul><li>It appears once the buy box scrolls out of view, and hides when the buy box is back on screen.</li><li>As shoppers read, its message changes to match the story section in the middle of the screen.</li><li>Its button adds the exact variant, quantity and purchase option chosen in the buy box. If that choice isn't available, the button takes shoppers back to the buy box instead.</li><li>It shows the product's price next to its button, and the price follows the shopper's variant and purchase option.</li><li>It only appears on product pages that use the <strong>Product hero</strong> section.</li></ul>
+<h3 id="setting-the-messages">Setting the messages<a class="anchor" href="#setting-the-messages" aria-label="Link to Setting the messages">#</a></h3>
+<ul><li><strong>Default message:</strong> <strong>Theme settings &gt; Conviction Rail</strong> (headline, optional supporting text, button text). Leave the headline empty and the rail shows the product's name.</li><li><strong>Per section:</strong> each story section on a product page has a <strong>Rail message</strong> block at the top of its block list. Set a <strong>Headline</strong>, optional <strong>Supporting text</strong> and a <strong>Button label</strong>. Leave it blank to use the default message.</li></ul>
+<p>Button labels:</p>
+<ul><li><strong>Add to cart:</strong> the default.</li><li><strong>Subscribe and save:</strong> shows only when the product has subscription plans. If no plan is chosen yet, the button takes shoppers to the plans instead of adding a one-time purchase.</li><li><strong>Build a bundle:</strong> shows only when Buy buttons uses Bundle tiers. It takes shoppers to the tier cards.</li><li><strong>Reserve yours:</strong> use it only when there's a real deadline or stock limit.</li></ul>
+<p>Tip: select a Rail message in the theme editor to preview it in the rail.</p>
+<h3 id="colors-2">Colors<a class="anchor" href="#colors-2" aria-label="Link to Colors">#</a></h3>
+<p>The rail uses <strong>Buttons and rail background</strong> and <strong>Buttons and rail text</strong> from Theme settings &gt; Colors.</p>
+<h2 id="story-sections">5. Story sections<a class="anchor" href="#story-sections" aria-label="Link to 5. Story sections">#</a></h2>
+<p>Story sections work in two ways:</p>
+<ul><li><strong>Inside a Product story section</strong>, where several run one after another on the product page.</li><li><strong>As their own sections</strong>, on any page. Find them in the <strong>Story</strong> category when you add a section.</li></ul>
+<p>Every story section on a product page carries a Rail message, except Founder note and Manifesto.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table"><table><thead><tr><th>Section</th><th>What it's for</th></tr></thead><tbody><tr><td><strong>Story chapter</strong></td><td>One storytelling moment: eyebrow, headline, text, image (left, right or above) and an optional link.</td></tr><tr><td><strong>Story sequence</strong></td><td>Numbered steps, such as "How it works". A row, a scrolling strip for longer sequences, or <strong>Pinned</strong>: the section holds still on desktop while scrolling moves through the steps, one photo each. Phones and shoppers who prefer reduced motion see the steps stacked. Numbers update when you reorder steps.</td></tr><tr><td><strong>Ingredients</strong></td><td>One card per ingredient or component: name, role, amount, benefit, image and source. Grid or list. Includes a footnote for disclaimers.</td></tr><tr><td><strong>Difference</strong></td><td>"The usual way" next to "Our way", one row per pair. You can rename both column labels.</td></tr><tr><td><strong>Why grid</strong></td><td>Icon, heading and text items in 2 to 4 columns. Use a theme icon or upload your own.</td></tr><tr><td><strong>Why for you</strong></td><td>Audience cards: "If you're... then this is for you."</td></tr><tr><td><strong>Stats</strong></td><td>Large numbers with labels and optional sources.</td></tr><tr><td><strong>Testimonial</strong></td><td>Customer reviews as cards that rotate, with neighbors peeking in at the sides. Each review is its own block (quote, name, detail, photo, verified badge, stars). Autoplay is optional, shows a pause button and never runs for shoppers who prefer reduced motion.</td></tr><tr><td><strong>Press</strong></td><td>A row of press logos with optional short quotes.</td></tr><tr><td><strong>Customer photos</strong></td><td>A photo grid that opens in a lightbox, with a credit and an optional "Shop the look" product.</td></tr><tr><td><strong>Comparison table</strong></td><td>Your product against 1 to 3 competitors, with check, cross or text in each cell. Scrolls sideways on phones with the first column pinned.</td></tr><tr><td><strong>FAQ</strong></td><td>Questions and answers in accordions, with optional topic filters and an optional link back to the buy box.</td></tr><tr><td><strong>Reverse risk</strong></td><td>Your guarantee, returns and shipping promises.</td></tr><tr><td><strong>Founder note</strong></td><td>Portrait, pull quote, letter, video and signature. On desktop the shorter column stays in view beside the taller one.</td></tr><tr><td><strong>Manifesto</strong></td><td>One large statement on a plain, tinted or dark background.</td></tr></tbody></table></div>
+<h3 id="section-buttons">Section buttons<a class="anchor" href="#section-buttons" aria-label="Link to Section buttons">#</a></h3>
+<p>Every story section (except Story chapter, which has its own link) has a <strong>Button</strong> group in its settings:</p>
+<ul><li><strong>Button label:</strong> leave it empty for no button.</li><li><strong>Button action:</strong> <strong>Link</strong> (any page), <strong>Add to cart</strong> or <strong>Buy it now</strong> (goes straight to checkout).</li><li><strong>Product:</strong> for Add to cart and Buy it now. On a product page, leave it empty to use the product shown, with the variant, quantity and purchase option the shopper picked.</li><li><strong>Button style:</strong> Filled or Outline.</li></ul>
+<h3 id="starter-stories">Starter stories<a class="anchor" href="#starter-stories" aria-label="Link to Starter stories">#</a></h3>
+<p>The <strong>Product story</strong> section has three presets: <strong>Product story</strong>, <strong>Supplement story</strong> and <strong>Tech story</strong>. Each one adds a full set of modules with rail messages filled in. Replace the copy with your own.</p>
+<h3 id="a-different-story-for-each-product">A different story for each product<a class="anchor" href="#a-different-story-for-each-product" aria-label="Link to A different story for each product">#</a></h3>
+<p>Text and image settings in story sections can connect to product metafields. Click the dynamic source icon next to a setting and choose a metafield. One product template can then show a different story for each product.</p>
+<h3 id="keep-claims-honest">Keep claims honest<a class="anchor" href="#keep-claims-honest" aria-label="Link to Keep claims honest">#</a></h3>
+<ul><li>Use real customer quotes and real numbers.</li><li>Add sources to ingredient claims and stats.</li><li>Use the Ingredients footnote for any disclaimer your products need.</li><li>Keep comparisons with competitors accurate and current.</li></ul>
+<h3 id="block-limits">Block limits<a class="anchor" href="#block-limits" aria-label="Link to Block limits">#</a></h3>
+<p>Shopify allows 50 blocks per section, including the items inside story sections. On long product pages, put large modules (a long FAQ or a big comparison table) in their own section instead of inside the Product story.</p>
+<h2 id="other-sections">6. Other sections<a class="anchor" href="#other-sections" aria-label="Link to 6. Other sections">#</a></h2>
+<p><strong>Heroes</strong> (in the Hero category):</p>
+<ul><li><strong>Hero, editorial:</strong> a full-width image or video with a headline and up to two buttons. Videos play muted and loop, with a pause button. They don't autoplay for shoppers who prefer reduced motion.</li><li><strong>Hero, split:</strong> image on one side, text on the other. Set <strong>Image ratio</strong> to <strong>Fit to screen</strong> to fill the first screen below the header, so the whole hero sits above the fold. Set a focal point on the image (Content &gt; Files) to keep the subject in frame.</li><li><strong>Hero, statement:</strong> a large text-first opening.</li></ul>
+<p><strong>Editorial</strong> (in the Editorial category): Quote, Pull quote, Editorial articles and Editorial newsletter.</p>
+<p><strong>Utility</strong> (in the Utility category): <strong>Spacer</strong> (separate heights for phones and desktop) and <strong>Divider</strong> (line, dotted, double or accent, with an optional symbol in the middle).</p>
+<p><strong>Commerce:</strong> Featured product, Featured collection, Collection list, Product related (complementary or related products from Shopify, or products you choose), and Product recommendations.</p>
+<p><strong>Content:</strong> Image banner, Image with text, Multicolumn, Collage, Rich text, Newsletter, Contact form and Custom Liquid.</p>
+<h2 id="collections-search-and-filters">7. Collections, search and filters<a class="anchor" href="#collections-search-and-filters" aria-label="Link to 7. Collections, search and filters">#</a></h2>
+<ul><li>Filters on collection and search pages come from Shopify's <strong>Search &amp; Discovery</strong> app. Set which filters to show there: availability, price, product type, vendor, variant options and more.</li><li>On phones, filters sit behind a <strong>Filter</strong> button so products show right away. It opens a panel with Apply and Clear all; active filters appear as small chips above the products. On desktop, filters are a sidebar.</li><li>The product count shows under the collection title.</li><li>For complementary products (used by Product related), also use Search &amp; Discovery.</li></ul>
+<h2 id="apps">8. Apps<a class="anchor" href="#apps" aria-label="Link to 8. Apps">#</a></h2>
+<ul><li><strong>Product hero</strong> and <strong>Product story</strong> accept <strong>app blocks</strong>. Add them from the Apps tab when adding a block.</li><li>Use the <strong>Custom Liquid</strong> block or section for app snippets that don't come as app blocks.</li><li><strong>Follow on Shop:</strong> shows in the footer when your store is set up for it in Shopify. You can turn it off in the footer settings.</li></ul>
+<h2 id="languages">9. Languages<a class="anchor" href="#languages" aria-label="Link to 9. Languages">#</a></h2>
+<p>All theme text is translatable. Add languages in <strong>Settings &gt; Languages</strong> and edit the theme's wording with <strong>Edit translations</strong> or the Translate &amp; Adapt app.</p>
+<h2 id="faq">10. FAQ<a class="anchor" href="#faq" aria-label="Link to 10. FAQ">#</a></h2>
+<div class="faq">
+<details><summary>The rail doesn't appear on my product page.</summary><p>Check that the product uses the default product template with the <strong>Product hero</strong> section. The rail appears only after the buy box scrolls out of view, so scroll down past it. It doesn't appear on the standard product template.</p></details>
+<details><summary>The rail message doesn't change as I scroll.</summary><p>Each story section needs its own Rail message. Blank messages fall back to the default in Theme settings &gt; Conviction Rail.</p></details>
+<details><summary>The rail says "Add to cart" even though I chose "Subscribe and save".</summary><p>That label shows only when the product has subscription plans. Check your subscription app is set up for this product.</p></details>
+<details><summary>Swatches don't show.</summary><p>Set the product's Category, connect the Color option to the Color category metafield, and set Variant picker style to Swatches. See "Color swatches" in section 3.</p></details>
+<details><summary>Bundle tiers don't show a saving.</summary><p>Savings come from the compare-at price. Set a compare-at price higher than the variant price on each pack variant.</p></details>
+<details><summary>I don't see Purchase options.</summary><p>They appear once a subscription app has added a selling plan to the product. One-time purchase is always the default.</p></details>
+<details><summary>Can I use my own fonts?</summary><p>Conviction uses Shopify's font library, which works on every device and loads fast. Choose any font there in Theme settings &gt; Typography.</p></details>
+<details><summary>How do I show a different story on each product?</summary><p>Connect story text and images to product metafields with the dynamic source icon. See section 5.</p></details>
+<details><summary>Can I add apps like reviews?</summary><p>Yes. Add their app block to the Product hero or Product story, or use a Custom Liquid block.</p></details>
+<details><summary>The free shipping bar shows the wrong amount.</summary><p>Set <strong>Free shipping threshold</strong> in Theme settings &gt; Cart to match your shipping rates, or set it to 0 to hide the bar.</p></details>
+<details><summary>How do I get help?</summary><p><a href="/conviction/support/">Contact support</a>. Include your store URL and screenshots. We reply within 2 business days.</p></details>
+</div>
+<h2 id="version-history">Version history<a class="anchor" href="#version-history" aria-label="Link to Version history">#</a></h2>
+<p><strong>1.0.0:</strong> First release. Adaptive Conviction Rail; 26 story, proof and editorial sections built on theme blocks; story presets; Pinned story sequence; rotating reviews; section buttons (link, add to cart, buy it now); selling plan picker and bundle tiers; swatches and swatch filters; quick buy; image zoom; mega menu that falls back to the menu button when it doesn't fit; phone filter panel; Fit to screen hero; French, German, Spanish and Italian.</p>
+<div class="callout">
+<div><h2>Still stuck?</h2><p>The person who built Conviction answers, within 2 business days.</p></div>
+<a class="button" href="/conviction/support/">Contact support</a>
+</div>
+</article>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="site-footer__top">
+<div><div class="site-footer__brand">ConvertCPG</div><div>Makers of Conviction, a Shopify theme for brands that teach and sell on the same page.</div></div>
+<div class="site-footer__links"><a href="/conviction/docs/">Documentation</a><a href="/conviction/support/">Support</a><a href="/">ConvertCPG</a></div>
+</div>
+<div class="site-footer__bottom"><span>© 2026 The Mendolia Group Corp. ConvertCPG is a Shopify Partner.</span><a href="mailto:support@convertcpg.com">support@convertcpg.com</a></div>
+</footer>
+
+<script>
+(function () {
+  var q = document.getElementById('docs-q');
+  var box = document.getElementById('docs-results');
+  var heads = Array.prototype.slice.call(document.querySelectorAll('#docs h2[id], #docs h3[id]'));
+  var index = heads.map(function (h) {
+    var text = '', n = h.nextElementSibling;
+    while (n && !/^H[23]$/.test(n.tagName)) { text += ' ' + n.textContent; n = n.nextElementSibling; }
+    var parent = h;
+    if (h.tagName === 'H3') { parent = h.previousElementSibling; while (parent && parent.tagName !== 'H2') parent = parent.previousElementSibling; }
+    return { id: h.id, title: h.textContent.replace(/#$/, ''), section: parent && parent !== h ? parent.textContent.replace(/#$/, '') : '', body: text.toLowerCase() };
+  });
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function close() { box.hidden = true; q.setAttribute('aria-expanded', 'false'); }
+  q.addEventListener('input', function () {
+    var term = q.value.trim().toLowerCase();
+    if (term.length < 2) { close(); return; }
+    var hits = index.filter(function (e) { return e.title.toLowerCase().indexOf(term) > -1 || e.body.indexOf(term) > -1; })
+      .sort(function (a, b) { return (b.title.toLowerCase().indexOf(term) > -1) - (a.title.toLowerCase().indexOf(term) > -1); })
+      .slice(0, 8);
+    box.innerHTML = hits.length ? hits.map(function (h) {
+      return '<a href="#' + h.id + '">' + esc(h.title) + (h.section ? '<small>' + esc(h.section) + '</small>' : '') + '</a>';
+    }).join('') : '<div class="docs-search__empty">No match. Try another word, or <a href="/conviction/support/">ask support</a>.</div>';
+    box.hidden = false; q.setAttribute('aria-expanded', 'true');
+  });
+  box.addEventListener('click', function (e) { if (e.target.closest('a')) { close(); q.value = ''; } });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.docs-search')) close(); });
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  if ('IntersectionObserver' in window && links.length) {
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          links.forEach(function (a) { a.classList.remove('is-active'); });
+          map[en.target.id].classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
+  if (location.hash === '' ) return;
+  var target = document.getElementById(location.hash.slice(1));
+  if (target && target.closest('details')) target.closest('details').open = true;
+})();
+</script>
+</body>
+</html>
