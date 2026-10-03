@@ -154,7 +154,7 @@ def home():
 <div class="modules">{mods}</div>
 </section>
 
-<section class="section section--tint" id="demos" data-rail="Two presets. Two real stores." data-rail-sub="Conviction and Alloy">
+<section class="section section--tint" id="demos" data-rail="Two presets. Two real stores." data-rail-sub="Conviction and Verity">
 <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;margin-bottom:48px">
 <div class="kicker kicker--plain">Two presets, two demo stores</div>
 <h2 class="h2">See it on a real store.</h2>
@@ -162,18 +162,18 @@ def home():
 </div>
 <div class="demos">
 <article class="demo">
-<img src="{IMG}sowfield-hero.jpg" alt="Sowfield demo store: a Daily Foundation canister and a green drink on a kitchen counter" loading="lazy">
+<img src="{IMG}northform-hero.jpg" alt="Northform demo store: a graphite keyboard on a desk" loading="lazy" style="object-position:50% 72%">
 <div class="demo__body">
-<div class="demo__top"><h3>Conviction</h3><span class="tag">Health and beauty</span></div>
-<p>Warm sand, moss and editorial serif headings. Built for supplements, wellness and ingredient-led products. Demo store: Sowfield.</p>
+<div class="demo__top"><h3 class="sans">Conviction</h3><span class="tag">Electronics</span></div>
+<p>Graphite, steel and clean sans-serif headings. Built for devices, hardware and technical products. Demo store: Northform.</p>
 <span class="button button--soon" aria-disabled="true">Demo coming soon</span>
 </div>
 </article>
 <article class="demo">
-<img src="{IMG}northform-hero.jpg" alt="Northform demo store: a graphite keyboard on a desk" loading="lazy" style="object-position:50% 72%">
+<img src="{IMG}sowfield-hero.jpg" alt="Sowfield demo store: a Daily Foundation canister and a green drink on a kitchen counter" loading="lazy">
 <div class="demo__body">
-<div class="demo__top"><h3 class="sans">Alloy</h3><span class="tag">Electronics</span></div>
-<p>Graphite, steel and clean sans-serif headings. Built for devices and technical products. Demo store: Northform.</p>
+<div class="demo__top"><h3>Verity</h3><span class="tag">Wellness</span></div>
+<p>Warm sand, moss and editorial serif headings. Built for supplements, wellness and ingredient-led products. Demo store: Sowfield.</p>
 <span class="button button--soon" aria-disabled="true">Demo coming soon</span>
 </div>
 </article>

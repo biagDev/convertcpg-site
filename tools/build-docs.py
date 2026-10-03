@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "conviction" / "docs" / "index.html"
 
 GUIDE_BLURBS = {
-    1: "Install, pick the Conviction or Alloy preset, and the five first steps.",
+    1: "Install, pick the Conviction or Verity preset, and the five first steps.",
     2: "Colors, typography, layout, cart, search, social links and rail defaults.",
     3: "Hero blocks, variant styles, swatches, bundle tiers, subscriptions, pickup, gift cards.",
     4: "How it behaves, default and per-section messages, button labels, colors.",
