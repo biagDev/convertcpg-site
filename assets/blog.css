@@ -1,0 +1,104 @@
+/* Blog: post and list layout. Loaded after conviction.css; shares its tokens. */
+.blog-hero{padding:64px var(--gutter) 40px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--edge)}
+.blog-hero .lead{max-width:640px}
+.blog-wrap{padding:0 var(--gutter)}
+.blog-inner{width:100%;max-width:68ch;margin:0 auto}
+.blog-inner--wide{max-width:960px}
+
+/* Cluster filter */
+.clusters{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 8px;font-size:14px}
+.clusters a{padding:7px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text-2)}
+.clusters a:hover{border-color:var(--ink);color:var(--ink)}
+.clusters a[aria-current="page"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+/* Post list */
+.post-list{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--ink)}
+.post-card{padding:28px 0;border-bottom:1px solid var(--edge);display:flex;flex-direction:column;gap:10px}
+.post-card__meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;color:var(--muted)}
+.post-card__meta .tag{color:var(--text-2)}
+.post-card h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.012em}
+.post-card h2 a{text-decoration:none}
+.post-card h2 a:hover{color:var(--muted)}
+.post-card p{margin:0;font-size:16px;line-height:1.6;color:var(--text-2);max-width:68ch}
+.post-empty{margin:40px 0 0;padding:32px;border:1px dashed var(--line);border-radius:16px;text-align:center;color:var(--text-2)}
+.post-empty a{color:var(--ink)}
+
+/* Post header */
+.post-head{padding:56px var(--gutter) 0}
+.crumbs{margin:0 0 24px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px;font-size:13px;color:var(--muted)}
+.crumbs li+li::before{content:"/";margin-right:6px;color:var(--line)}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--ink)}
+.post-title{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-.018em;line-height:1.06;font-size:clamp(34px,5vw,56px)}
+.post-dek{margin:18px 0 0;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:var(--text-2)}
+.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:24px 0 0;font-size:14px;color:var(--muted)}
+.post-meta a{color:var(--ink);text-decoration:none;font-weight:500}
+.post-meta a:hover{color:var(--muted)}
+.post-cover{margin:36px 0 0}
+.post-cover img{width:100%;height:auto;border-radius:16px}
+
+/* TOC */
+.post-toc{margin:40px 0 0;padding:20px 22px;border:1px solid var(--edge);border-radius:14px;background:var(--white);font-size:15px}
+.post-toc summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.post-toc summary::-webkit-details-marker{display:none}
+.post-toc summary::after{content:"+";color:var(--muted);font-size:20px}
+.post-toc[open] summary::after{content:"\2212"}
+.post-toc ol{margin:14px 0 0;padding-left:20px}
+.post-toc li{margin:6px 0}
+.post-toc a{text-decoration:none;color:var(--text-2)}
+.post-toc a:hover{color:var(--ink)}
+
+/* Post body (extends .prose from conviction.css) */
+.post-body{margin-top:40px;font-size:17px;line-height:1.75}
+.post-body h2{font-size:clamp(26px,3vw,34px);margin:56px 0 14px}
+.post-body h3{font-size:20px}
+.post-body h4{font-size:17px;font-weight:600;margin:28px 0 6px}
+.post-body p{margin:0 0 20px}
+.post-body img{width:100%;height:auto;border-radius:12px;margin:8px 0 24px}
+.post-body figure{margin:8px 0 28px}
+.post-body figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.post-body blockquote{margin:28px 0;padding:4px 0 4px 22px;border-left:2px solid var(--sand);font-family:var(--serif);font-size:1.15em;line-height:1.5;color:var(--ink)}
+.post-body blockquote p{margin:0}
+.post-body pre{overflow-x:auto;padding:18px 20px;border-radius:12px;background:var(--ink);color:var(--paper);font-size:14px;line-height:1.55;margin:0 0 24px}
+.post-body pre code{background:none;padding:0;color:inherit;font-size:inherit}
+.post-body hr{display:block;border:0;border-top:1px solid var(--edge);margin:40px 0}
+.post-body table{display:block;overflow-x:auto}
+.post-body a{text-decoration-thickness:1px;text-underline-offset:3px}
+.post-body .anchor{display:none}
+
+/* Lite YouTube facade */
+.lite-yt{position:relative;aspect-ratio:16/9;margin:8px 0 28px;border-radius:14px;overflow:hidden;background:var(--ink)}
+.lite-yt button{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;background:none;cursor:pointer;display:block}
+.lite-yt img{width:100%;height:100%;object-fit:cover;margin:0;border-radius:0;opacity:.9}
+.lite-yt__play{position:absolute;left:50%;top:50%;width:68px;height:48px;transform:translate(-50%,-50%);border-radius:12px;background:var(--ink);display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.6)}
+.lite-yt__play::after{content:"";border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent var(--paper);margin-left:4px}
+.lite-yt button:hover .lite-yt__play{background:var(--sand)}
+.lite-yt button:hover .lite-yt__play::after{border-left-color:var(--ink)}
+.lite-yt button:focus-visible{outline:3px solid var(--sand);outline-offset:-3px}
+.lite-yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* Author, docs card, related */
+.post-foot{margin-top:56px;display:flex;flex-direction:column;gap:20px}
+.author{display:flex;gap:18px;align-items:center;padding:22px;border:1px solid var(--edge);border-radius:16px;background:var(--white)}
+.author img{width:64px;height:64px;flex-shrink:0;object-fit:cover;border-radius:50%}
+.author b{display:block;font-weight:600}
+.author span{display:block;font-size:14px;color:var(--text-2);line-height:1.5}
+.author a{text-decoration:none;font-weight:500}
+.docs-card{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 20px;padding:22px 24px;border-radius:16px;background:var(--ink);color:var(--paper);text-decoration:none}
+.docs-card:hover{color:var(--paper);background:#1F1F1D}
+.docs-card b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.2}
+.docs-card span{display:block;font-size:14px;color:#D8D6D0;margin-top:4px}
+.docs-card .go{color:var(--sand);font-size:15px;font-weight:500;white-space:nowrap}
+.related{margin-top:56px;padding-top:32px;border-top:1px solid var(--ink)}
+.related h2{margin:0 0 6px;font-family:var(--serif);font-weight:400;font-size:26px}
+.related .post-list{border-top:0;margin-top:0}
+.related .post-card{padding:20px 0}
+.related .post-card h2{font-size:21px}
+
+@media (max-width:560px){
+  .blog-hero{padding:44px var(--gutter) 32px}
+  .post-head{padding-top:36px}
+  .post-body{font-size:16px}
+  .author{flex-direction:column;align-items:flex-start}
+  .docs-card .go{white-space:normal}
+}

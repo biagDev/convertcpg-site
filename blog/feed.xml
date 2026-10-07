@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>ConvertCPG Blog</title>
+<link>https://convertcpg.com/blog/</link>
+<atom:link href="https://convertcpg.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Shopify conversion for CPG brands: product pages, teardowns and the Conviction theme, from Biagio Mendolia.</description>
+<language>en</language>
+<lastBuildDate>Wed, 07 Oct 2026 09:00:00 +0000</lastBuildDate>
+</channel>
+</rss>

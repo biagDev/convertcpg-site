@@ -17,6 +17,8 @@ favicon.* / apple-touch-icon.png / icon-512.png / site.webmanifest
 og-image.jpg        1200x630 social share card
 robots.txt, sitemap.xml
 tools/build.mjs     regenerates index.html + assets/ from a Claude Design export
+tools/build-site.py builds home, about, FAQ, services and refreshes shared nav/footer
+tools/build-blog.py builds /blog/ from blog-src/*.md (see blog-src/README.md)
 ```
 
 Everything the page needs is served from this repo — there are no CDN or Google Fonts
