@@ -257,9 +257,9 @@ def home():
 <a href="/conviction/docs/">Read the docs</a>
 </div>
 """
-    jsonld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ConvertCPG",'
-              '"legalName":"The Mendolia Group Corp","url":"https://convertcpg.com/","logo":"https://convertcpg.com/assets/convert-cpg.png",'
-              '"email":"support@convertcpg.com","founder":{"@type":"Person","name":"Biagio Mendolia"}}</script>\n')
+    jsonld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://convertcpg.com/#org","name":"ConvertCPG",'
+              '"legalName":"The Mendolia Group Corp","url":"https://convertcpg.com/","logo":"https://convertcpg.com/assets/brand/convertcpg-mark-512.png",'
+              '"email":"support@convertcpg.com","founder":{"@type":"Person","@id":"https://convertcpg.com/about/#person","name":"Biagio Mendolia"}}</script>\n')
     write("index.html", head("Conviction · A Shopify theme by ConvertCPG",
                              "Conviction is a Shopify theme for brands that teach and sell on the same page. Story sections and the Adaptive Conviction Rail. Coming soon to the Shopify Theme Store.",
                              "/", extra=jsonld) + body + tail())
@@ -327,9 +327,14 @@ def about():
 </section>
 </main>
 """
+    jsonld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://convertcpg.com/about/#person",'
+              '"name":"Biagio Mendolia","jobTitle":"Founder","url":"https://convertcpg.com/about/",'
+              '"image":"https://convertcpg.com' + IMG + 'biagio-portrait.jpg",'
+              '"worksFor":{"@type":"Organization","@id":"https://convertcpg.com/#org","name":"ConvertCPG"},'
+              '"knowsAbout":["Shopify","Conversion rate optimization","Ecommerce product pages","CPG brands"]}</script>\n')
     write("about/index.html", head("About · ConvertCPG",
                                    "ConvertCPG is Biagio Mendolia: ten years building and rebuilding Shopify stores, now the maker of the Conviction theme.",
-                                   "/about/", og_image=IMG + "biagio-portrait.jpg") + body + tail())
+                                   "/about/", og_image=IMG + "biagio-portrait.jpg", extra=jsonld) + body + tail())
 
 
 # ---------------------------------------------------------------- FAQ
@@ -496,9 +501,19 @@ def support():
     print("Refreshed conviction/support/index.html")
 
 
+def docs_header():
+    """The docs page is built by build-docs.py from an external file; keep its nav in sync."""
+    p = ROOT / "conviction/docs/index.html"
+    s = p.read_text()
+    s = re.sub(r'<header class="site-header">.*?</header>\n', lambda m: header("docs"), s, count=1, flags=re.S)
+    p.write_text(s)
+    print("Refreshed header on conviction/docs/index.html")
+
+
 if __name__ == "__main__":
     home()
     about()
     faq()
     services()
     support()
+    docs_header()

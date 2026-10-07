@@ -28,6 +28,7 @@ NAV = [
     ("Docs", "/conviction/docs/", "docs"),
     ("FAQ", "/conviction/faq/", "faq"),
     ("Support", "/conviction/support/", "support"),
+    ("Blog", "/blog/", "blog"),
     ("About", "/about/", "about"),
 ]
 
