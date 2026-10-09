@@ -45,3 +45,6 @@ draft: true                                      # optional, drafts are skipped 
 3. Commit the markdown and the generated `blog/` and `sitemap.xml`, then merge to `main`.
 
 Do not rename a slug after publishing; GitHub Pages cannot redirect.
+
+## After publishing
+Tell Bing about the new post: `python3 tools/ping-bing.py https://convertcpg.com/blog/<slug>/` (key lives in ~/.convertcpg/bing-webmaster.key, never in git). Google picks it up from the sitemap.
