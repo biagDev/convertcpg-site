@@ -64,7 +64,7 @@
 <h3 id="1-add-your-stores">1. Add your stores<a class="anchor" href="#1-add-your-stores" aria-label="Link to 1. Add your stores">#</a></h3>
 <p>Upload your store list and we add the retailers for you. Or add one retailer and its stores by hand.</p>
 <p><strong>Upload:</strong> go to <strong>Upload stores</strong>. Click <strong>Download a sample file</strong> to get a spreadsheet you can fill in. Save it as a CSV file and drop it on the page. We check every row first and tell you what we found. Nothing is saved until you click <strong>Save stores</strong>. Then we put each store on the map from its address, usually within a minute. Large lists take a bit longer. You can leave the page; the upload keeps going. The CSV format is below.</p>
-<p><strong>By hand:</strong> go to <strong>Retailers &gt; Add a retailer</strong>, then add its stores. A retailer is the chain that owns stores, like Target or Whole Foods. A store with no chain is an independent store. This step is done once you have at least one store; a retailer with no stores does not finish it.</p>
+<p><strong>By hand:</strong> go to <strong>Retailers &gt; Add a retailer</strong>, then add its stores. A retailer is a chain or shop name. A store is one address. Every store belongs to a retailer: a store with no chain uses its own name as the retailer. This step is done once you have at least one store; a retailer with no stores does not finish it.</p>
 <p>For each retailer you can set a website and a "Buy online link" (a link to your products on their site). To add a logo, go to <strong>Content &gt; Metaobjects &gt; Retailer</strong> in your Shopify admin, open the retailer, and upload an image. Logos show in "Find it at" and in the store finder.</p>
 <h3 id="2-pick-where-each-product-is-sold">2. Pick where each product is sold<a class="anchor" href="#2-pick-where-each-product-is-sold" aria-label="Link to 2. Pick where each product is sold">#</a></h3>
 <p>Go to <strong>Products</strong>. Every product in your store is listed. Check the box for each retailer that sells it. Click <strong>Save</strong>.</p>
@@ -100,7 +100,7 @@
 <tr>
 <td><code>retailer</code></td>
 <td>No</td>
-<td>The chain. Leave empty for an independent store</td>
+<td>The chain. Leave empty and we use the store name as the retailer</td>
 <td><code>Sprouts</code></td>
 </tr>
 <tr>
@@ -171,14 +171,14 @@
 Sprouts Farmers Market #412,Sprouts,1111 W 6th St,,Austin,TX,78703,US,512-555-0100,,,,grocery
 Sprouts Farmers Market #380,Sprouts,4600 W Lovers Ln,,Dallas,TX,75209,US,214-555-0101,,,,grocery
 Whole Foods Market Lamar,Whole Foods Market,525 N Lamar Blvd,,Austin,TX,78703,US,512-555-0102,30.2706,-97.7530,,grocery;flagship
-Target T-1234,Target,&quot;5406 Brodie Ln, Suite 100&quot;,,Sunset Valley,TX,78745,US,,,,original-12oz;mango-12oz,mass
+Target T-1234,Target,&quot;5406 Brodie Ln, Suite 100&quot;,,Sunset Valley,TX,78745,US,,,,,mass
 </code></pre>
 <p><strong>Putting stores on the map.</strong> Leave latitude and longitude empty for stores in the US, Canada and Mexico. For a store in another country, fill in both, or enter its exact spot on the Stores page after the upload (in Google Maps, right-click the store and copy the numbers at the top).</p>
 <p><strong>Uploading again.</strong> Upload the same list any time. We match stores by retailer, street address and ZIP code. Same rows: nothing changes. Changed name or phone: updated. New rows: added.</p>
 <p><strong>What we check.</strong> Rows with a problem are marked "Will be skipped" with the reason; rows we save but want you to look at are "Will be saved". Click <strong>Download rows with problems</strong> to get just those rows with a column that says what to fix. Common ones: a missing street or ZIP, a ZIP that lost its first zero (we fix it and tell you), a retailer spelled almost like one you have ("Sprout" for "Sprouts": fix the spelling, or the stores would show none of that retailer's products), a product handle that is not in your store, the same store twice.</p>
 <h2 id="retailers-and-a-store-s-own-list">Retailers and a store's own list<a class="anchor" href="#retailers-and-a-store-s-own-list" aria-label="Link to Retailers and a store&#x27;s own list">#</a></h2>
 <p>Products are picked per retailer. Every store of that retailer shows them.</p>
-<p>If one store sells a different set, give that store its own list: the <code>products</code> column in the file, or on the Products page under "Different at some stores". A store's own list replaces the retailer's list for that store only. "Find it at" on the product page always shows retailers, not single stores.</p>
+<p>If one store sells a different set, give that store its own list: the <code>products</code> column in the file, or on the Products page under "Different at some stores". In the file, use each product's URL handle, the last part of the product's web address: for <code>/products/original-12oz</code> it is <code>original-12oz</code>. A store's own list replaces the retailer's list for that store only. "Find it at" on the product page always shows retailers, not single stores.</p>
 <h2 id="the-two-sections-and-where-they-go">The two sections and where they go<a class="anchor" href="#the-two-sections-and-where-they-go" aria-label="Link to The two sections and where they go">#</a></h2>
 <p>Both are app blocks you place in your theme editor (Online Store &gt; Themes &gt; Customize). The app never changes your theme's code.</p>
 <p><strong>Store finder.</strong> Goes on a page. Shoppers only see it on the page you choose (your Where to buy page by default). On <strong>Dawn</strong> and most themes, the editor puts it in an Apps section on the page. On <strong>Horizon</strong> and other newer themes it works the same way. In the editor you can pick its page under "Show on this page".</p>
