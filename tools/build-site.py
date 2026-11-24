@@ -285,8 +285,8 @@ def about():
 
 <section class="strip" aria-label="Background">
 <div><b>10+</b><span>years in ecommerce, since age 16</span></div>
-<div><b>100s</b><span>of Shopify brands worked on as an agency ecommerce director</span></div>
-<div><b>$150M+</b><span>in online sales for the brands I've worked on</span></div>
+<div><b>100s</b><span>of Shopify brands worked on</span></div>
+<div><b>3x</b><span>conversion rate on one client store, 1.4% to 4.31%</span></div>
 <div><b>2</b><span>business days, the most you'll wait for a reply from me</span></div>
 </section>
 
@@ -428,7 +428,7 @@ def services():
 </section>
 
 <section class="strip strip--3" aria-label="Results in numbers">
-<div><b>$150M+</b><span>In online sales for brands</span></div>
+<div><b>3x</b><span>Conversion rate on one client store, 1.4% to 4.31%</span></div>
 <div><b>84%</b><span>Client success rate</span></div>
 <div><b>3.12%</b><span>Avg conversion rate for brands</span></div>
 </section>
@@ -486,7 +486,7 @@ def services():
               '"serviceType":"Conversion rate optimization for Shopify stores","areaServed":"Worldwide"}</script>\n')
     foot = FOOTER.replace('<a href="/services/">Setup and CRO services</a>', '<a href="/">Conviction, our Shopify theme</a>')
     write("services/index.html", head("ConvertCPG · Shopify Conversion Rate Optimization for CPG Brands",
-                                      "Shopify conversion rate optimization for CPG brands. Website restructuring that lifts CVR and AOV. $150M+ in online sales driven. Book a free audit.",
+                                      "Shopify conversion rate optimization for CPG brands. Website restructuring that lifts CVR and AOV. Book a free audit.",
                                       "/services/", og_image="/og-image.jpg", extra=jsonld) + body + foot + "</body>\n</html>\n")
 
 

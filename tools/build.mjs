@@ -83,7 +83,7 @@ const resourceMap = {};
 for (const e of ext) if (urlFor[e.uuid]) resourceMap[e.id] = urlFor[e.uuid];
 
 const TITLE = 'ConvertCPG — Shopify Conversion Rate Optimization for CPG Brands';
-const DESC  = 'Shopify conversion rate optimization for CPG brands. Website restructuring that lifts CVR and AOV. $150M+ in online sales driven. Book a free audit.';
+const DESC  = 'Shopify conversion rate optimization for CPG brands. Website restructuring that lifts CVR and AOV. Book a free audit.';
 const jsonld = {
   '@context':'https://schema.org','@type':'ProfessionalService','name':'ConvertCPG',
   legalName:'The Mendolia Group Corp', url: ORIGIN + '/', logo: ORIGIN + '/assets/convert-cpg.png',
